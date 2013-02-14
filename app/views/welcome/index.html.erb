@@ -1,0 +1,30 @@
+<div class="header">
+ <h1>MYBLOG</h1>
+ <span><%= link_to '首页',welcome_index_path %></span>
+ <span>About</span>
+</div>
+
+<div class="content">
+ <div class="content_left">
+   <% @articles.each do |article|%>
+     <div class="article_contents">
+        <%= article.content %>
+     </div>
+   <% end %>
+ </div>
+ <div class="content_right">
+   <div class="regist_login">
+      <span class="regist">regist</span>
+      <span class="login">login</span>
+   </div>
+   <div>
+     <ul>
+        <% @sorts.each do |sort|%>
+           <li>
+             <%= sort.name%>
+           </li>
+        <% end %>
+     </ul>
+   </div>
+ </div>
+</div>
