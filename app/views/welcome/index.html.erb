@@ -21,7 +21,7 @@
      <ul>
         <% @sorts.each do |sort|%>
            <li>
-             <%= sort.name%>
+             <%= link_to sort.name,show_articles_path(sort)%>
            </li>
         <% end %>
      </ul>

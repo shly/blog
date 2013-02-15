@@ -22,7 +22,7 @@
 
 <p>
   <b>Sort:</b>
-  <%= @article.sort %>
+  <%= Sort.find_by_id(@article.sort).name%>
 </p>
 
 <p>
