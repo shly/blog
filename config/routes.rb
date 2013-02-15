@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  get "about/index"
+
   resources :sorts
 
   root :to => 'welcome#index'
