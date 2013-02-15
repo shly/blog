@@ -9,6 +9,7 @@
    <% @articles.each do |article|%>
      <div class="article_contents">
         <%= article.content %>
+     
      </div>
    <% end %>
  </div>
@@ -21,7 +22,7 @@
      <ul>
         <% @sorts.each do |sort|%>
            <li>
-             <%= link_to sort.name,show_articles_path(sort)%>
+             <%= link_to sort.name,partshow_path(sort.id)%>
            </li>
         <% end %>
      </ul>

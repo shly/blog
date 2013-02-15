@@ -9,13 +9,8 @@ class WelcomeController < ApplicationController
   end
   
   def partshow
-    @article = Article.all
-    @sort = Sort.find(params[:id])
-    @article.each do |article|
-      while article.sort==@sort.name 
-        @articles=Array.new
-        @articles.push(article)
-      end
-    end
+   
+   @articles = Article.all
+   @sorts = Sort.all
   end
 end
