@@ -9,8 +9,8 @@ class WelcomeController < ApplicationController
   end
   
   def partshow
-   
-   @articles = Article.all
+#   @sort = Sort.find(params[:id])
+   @articles = Article.find(:all, :conditions => { :sort => params[:id] })
    @sorts = Sort.all
   end
 end

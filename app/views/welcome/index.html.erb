@@ -8,7 +8,7 @@
  <div class="content_left">
    <% @articles.each do |article|%>
      <div class="article_contents">
-        <%= article.content %>
+        <%= article.sort %>
      
      </div>
    <% end %>
@@ -20,9 +20,9 @@
    </div>
    <div>
      <ul>
-        <% @sorts.each do |sort|%>
+        <% @sorts.each do |t|%>
            <li>
-             <%= link_to sort.name,partshow_path(sort.id)%>
+             <%= link_to t.name, { :controller => 'welcome', :action => 'partshow', :id =>t} %>
            </li>
         <% end %>
      </ul>
