@@ -9,8 +9,16 @@ class WelcomeController < ApplicationController
   end
   
   def partshow
-#   @sort = Sort.find(params[:id])
    @articles = Article.find(:all, :conditions => { :sort => params[:id] })
    @sorts = Sort.all
+   if @articles.empty?
+      redirect_to :action =>'empty'
+   else
+      @articles
+   end
+  end
+ 
+  def empty
+    @sorts = Sort.all
   end
 end

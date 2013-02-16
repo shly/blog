@@ -8,6 +8,7 @@ Blog::Application.routes.draw do
   resources :articles
   match 'welcome/index' => 'welcome#index'
   match 'partshow' => 'welcome#partshow'
+  match 'welcome/empty' => 'welcome#empty'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
