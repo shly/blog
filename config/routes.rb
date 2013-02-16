@@ -5,7 +5,9 @@ Blog::Application.routes.draw do
 
   root :to => 'welcome#index'
 
-  resources :articles
+  resources :articles do 
+    resources :comments
+  end
   match 'welcome/index' => 'welcome#index'
   match 'partshow' => 'welcome#partshow'
   match 'welcome/empty' => 'welcome#empty'
