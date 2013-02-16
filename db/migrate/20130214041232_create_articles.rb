@@ -6,7 +6,6 @@ class CreateArticles < ActiveRecord::Migration
       t.string :date
       t.text :content
       t.string :sort
-      t.text :comment
 
       t.timestamps
     end

@@ -8,7 +8,7 @@
  <div class="content_left">
    <% @articles.each do |article|%>
      <div class="article_contents">
-        <%= article.sort %>
+        <%= article.content %>
      
      </div>
    <% end %>
@@ -18,7 +18,7 @@
       <span class="regist">regist</span>
       <span class="login"><%= link_to 'login',articles_path  %></span>
    </div>
-   <div>
+   <div class="typelist">
      <ul>
         <% @sorts.each do |t|%>
            <li>

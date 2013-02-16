@@ -1,3 +1,3 @@
 class Article < ActiveRecord::Base
-  attr_accessible :author, :comment, :content, :date, :sort, :title
+  attr_accessible :author, :content, :date, :sort, :title
 end

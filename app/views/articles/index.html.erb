@@ -7,7 +7,6 @@
     <th>Date</th>
     <th>Content</th>
     <th>Sort</th>
-    <th>Comment</th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,7 +19,6 @@
     <td><%= article.date %></td>
     <td><%= article.content %></td>
     <td><%= Sort.find_by_id(article.sort).name%></td>
-    <td><%= article.comment %></td>
     <td><%= link_to 'Show', article %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>
     <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,3 +30,4 @@
 
 <%= link_to 'New Article', new_article_path %>
 <%= link_to 'Manage Sort', sorts_path%>
+<%= link_to 'Index', welcome_index_path %>
