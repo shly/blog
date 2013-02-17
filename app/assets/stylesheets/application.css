@@ -87,14 +87,14 @@
 .typelist{
 	clear: both;
 	margin-left: 5px;
-	border: 1px solid #696969;
+	border: 1px solid #C6C8CB;
 	border-radius: 5px;
 	overflow: hidden;
 	margin-top: 200px;
 }
 .typelist ul li{
 	display: block;
-	border-bottom: 1px solid #696969;
+	border-bottom: 1px solid #C6C8CB;
 	height: 35px;
     line-height: 35px;
 }
@@ -112,7 +112,6 @@
 /*typelist*/
 /*show articles*/
 .article_contents{
-	border: 1px solid #C6C8CB;
 	border-radius: 5px;
 	padding: 5px;
 	text-align: left;
@@ -122,7 +121,11 @@
 	float: right;
 	margin-right: 20px;
 	overflow: hidden;
+	border: 1px solid #F0F0F0;
 	background-color: #ffffff;
+}
+.article_contents:hover{
+	border: 1px solid #C6C8CB;
 }
 .article_contents h2{
 	text-decoration: none;
