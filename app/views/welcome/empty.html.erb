@@ -18,6 +18,7 @@
     </div>
     <div class="typelist">
        <ul>
+             <li><%= link_to 'all articles',welcome_index_path %></li>
           <% @sorts.each do |t|%>
              <li>
                 <%= link_to t.name, { :controller => 'welcome', :action => 'partshow', :id =>t }%>
