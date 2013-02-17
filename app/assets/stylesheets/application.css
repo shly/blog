@@ -11,3 +11,21 @@
  *= require_self
  *= require_tree .
  */
+ body{
+ 	background-image: url("../images/bg.png");
+ }
+.content,.header_main{
+ border:1px solid red;
+ width:960px;
+ margin:0 auto;
+ padding:0px;
+ text-align:center;
+ position: relative;
+ overflow: auto;
+}
+.header_main{
+	text-align: left;
+}
+.header_main span{
+	float: right;
+}
