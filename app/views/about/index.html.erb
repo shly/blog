@@ -1,3 +1,11 @@
-<h1>About MY Blog</h1>
-<p>这是一个个人的空间，你可以在这里记录下你生活的每个点滴</p>
-<%=link_to 'index', welcome_index_path %>
+<div class="header">
+  <div class="header_main">
+    <h1>MYBLOG</h1>
+    <span><%= link_to '首页',welcome_index_path %></span>
+    <span><%= link_to 'About',about_index_path %></span>
+  </div>
+</div>
+
+<div class="content_show">
+  <p>这是一个个人的空间，你可以在这里记录下你生活的每个点滴</p>
+</div>

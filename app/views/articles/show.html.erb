@@ -1,60 +1,60 @@
-<p id="notice"><%= notice %></p>
+<div class="header">
+  <div class="header_main">
+    <h1>MYBLOG</h1>
+    <span><%= link_to '首页',welcome_index_path %></span>
+    <span><%= link_to 'About',about_index_path %></span>
+  </div>
+</div>
 
-<p>
-  <b>Title:</b>
-  <%= @article.title %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @article.author %>
-</p>
-
-<p>
-  <b>Date:</b>
-  <%= @article.date %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @article.content %>
-</p>
-
-<p>
-  <b>Sort:</b>
-  <%= Sort.find_by_id(@article.sort).name%>
-</p>
-
-<h2>Comments:</h2>
-<% @article.comments.each do |comment|%>
+<div class="content_show">
    <p>
-     <b>Commenter:</b>
-     <%= comment.commenter%>
-   </p>
-   <p>
-      <b>Comment:</b>
-      <%= comment.body %>
-   </p>
-   <p>
-      <%= link_to "destroy Comment" ,[comment.article, comment], method: :delete, data: { confirm: 'Are you sure?'}%>
-   </p>
-<% end %>
-<p>
-   <h2>Add a Comment:</h2>
-   <%= form_for([@article, @article.comments.build]) do |f|%>
-     <div class="field">
-       <%= f.label :commenter%>
-       <%= f.text_field :commenter%>
-     </div>
-     <div class="field">
-        <%= f.label :body%>
-        <%= f.text_area :body%>
-     </div>
-     <div class="action">
-         <%= f.submit %>
-     </div>
-   <% end %>
-</p>
+    <b>Sort:</b>
+    <%= Sort.find_by_id(@article.sort).name%>
+  </p>
+  <p id="notice"><%= notice %></p>
+  <h1>
+    <%= @article.title %>
+  </h1>
+  <div class="message">
+    Author:
+    <%= @article.author %>
+    Date:
+    <%= @article.date %>
+  </div>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+  <div class="article_content">
+    <%= @article.content %>
+  </div>
+
+  <% @article.comments.each do |comment|%>
+   <div class="comments">
+     <span class="commenter">
+       <%= comment.commenter%>:
+     </span>
+     <span class="comment_body">
+        <%= comment.body %>
+     </span>
+     <span class="destroy_comment">
+        <%= link_to "delete" ,[comment.article, comment], method: :delete, data: { confirm: 'Are you sure?'}%>
+     </span>
+    </div>
+  <% end %>
+
+  <div class="add_comment">
+     <%= form_for([@article, @article.comments.build]) do |f|%>
+       <div class="field">
+         <%= f.label :commenter%>
+         <%= f.text_field :commenter%>
+       </div>
+       <div class="field">
+          <%= f.text_area :body%>
+       </div>
+       <div class="action" id="show_action">
+           <%= f.submit %>
+       </div>
+     <% end %>
+  </div>
+
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Back', articles_path %>
+</div>

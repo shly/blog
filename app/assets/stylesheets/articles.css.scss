@@ -1,3 +1,98 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.login_content{
+	width:960px;
+	margin:0 auto;
+	padding:0px;
+	background-color:#ffffff;
+}
+/*show detail*/
+.content_show{
+  background-color:#ffffff;	
+  width:960px;
+  margin:0 auto;
+  padding:5px;
+  text-align:left;
+  position: relative;
+  overflow: auto;
+  min-height:500px;
+}
+.message{
+	text-align:center;
+	font-size:10px;
+}
+.article_content{
+	margin-top:10px;
+}
+.content_show h1{
+	display:block;
+	text-align:center;
+	font-size:20px;
+}
+.comments{
+	margin:20px;
+	padding:10px;
+	border:1px solid #A9A9A9;
+}
+/*show detail*/
+/*comment*/
+.destroy_comment{
+	display:inline-block;
+    float:right;
+    font-size:12px;
+}
+.destroy_comment a:hover{
+	color:blue;
+}
+.commenter{
+	color:#A52A2A;
+	margin-right:20px;
+}
+.add_comment textarea{
+	border:1px solid #A9A9A9;
+	width:900px;
+	height:50px;
+	margin:20px;
+	padding:10px;
+}
+#show_action input{
+    float:right;
+    margin-right:20px;
+	border:1px solid #A9A9A9;
+	width:100px;
+	height:35px;
+	line-height:20px;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	cursor: pointer;
+}
+#show_action input:active{
+	border:1px solid #A9A9A9;
+	border-bottom:1px solid #ffffff;
+	border-right:1px solid #ffffff;
+}
+/*comment*/
+/*form*/
+#article_title{
+	width:900px;
+	margin:0 auto;
+	margin-top:20px;
+	height:60px;
+	font-size:18px;
+	border:1px solid #A9A9A9;
+	text-align:center;
+}
+.message input{
+	border:1px solid #A9A9A9;
+	width:200px;
+}
+#article_content{
+    margin:10px;
+    padding:10px;
+    margin-top:20px;
+	border:1px solid #A9A9A9;
+	width:920px;
+	min-height:400px;
+}
+/*form*/

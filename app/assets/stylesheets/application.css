@@ -12,10 +12,24 @@
  *= require_tree .
  */
  body{
- 	background-image: url("../images/bg.png");
+ 	background-color: #E6E6FA;
+ 	font-family: verdana, arial, helvetica, sans-serif;
  }
+ footer{
+ 	text-align: center;
+ }
+ a {
+  text-decoration: none;
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
 .content,.header_main{
- border:1px solid red;
  width:960px;
  margin:0 auto;
  padding:0px;
@@ -23,9 +37,116 @@
  position: relative;
  overflow: auto;
 }
+.content{
+	border-bottom: 1px solid #ffffff;
+}
+.header{
+	background-color: rgb(20,68,101);
+	color: #ffffff;
+	height: 80px;
+}
+/*setting header content*/
+.header h1{
+	display: inline-block;
+	height: 80px;
+	line-height: 80px;
+	margin: 0px;
+}
 .header_main{
 	text-align: left;
+	vertical-align: text-bottom;
 }
 .header_main span{
 	float: right;
+	display: block;
+	width: 60px;
+	height: 30px;
+	text-align: center;
+	margin-top: 50px;
 }
+.header_main span a{
+	color: #ffffff;
+}
+/*setting header content*/
+.content_left{
+	width: 740px;
+	float: left;
+	min-height: 500px;
+	border-right: 1px solid #ffffff;
+}
+.content_right{
+	width: 215px;
+	float: left;
+}
+/*typelist*/
+.typelist ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+} 
+.typelist{
+	margin-left: 5px;
+	margin-top: 10px;
+	border: 1px solid #C6C8CB;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.typelist ul li{
+	display: block;
+	border: 1px solid #C6C8CB;
+	height: 35px;
+    line-height: 35px;
+}
+.typelist ul li a{
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-image: url("images/q.png");
+    color: #444;
+}
+/*typelist*/
+/*show articles*/
+.article_contents{
+	border: 1px solid #C6C8CB;
+	border-radius: 5px;
+	padding: 5px;
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 700px;
+	float: right;
+	margin-right: 20px;
+	overflow: hidden;
+}
+.article_contents h2{
+	text-decoration: none;
+	font-size: 20px;
+
+}
+.art_content{
+   font-size: 15px;
+   max-height: 150px;
+   overflow: hidden;
+   line-height: 19px;
+}
+p.art_title{
+	font-size: 20px;
+	margin: 0px;
+	margin-bottom: 5px;
+}
+p.art_title span{
+	display: inline-block;
+	font-size:12px;
+	float: right;
+	color: #C6C8CB;
+	margin-right: 10px;
+}
+.show_detail{
+	text-align: right;
+}
+.show_detail a{
+	text-decoration: none;
+	font-size: 12px;
+	color: #008B8B;
+}
+/*show articles*/

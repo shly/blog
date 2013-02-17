@@ -11,27 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
+  <h1>
     <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br />
+  </h1>
+  <div class="message">
+    Author:
     <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br />
+    Date:
     <%= f.text_field :date %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
-  <div class="field">
-    <%= f.label :sort %><br />
-    <%= select("article","sort",@sorts.collect{|t|[t.name,t.id]})%>
-  </div>
-  <div class="actions">
+   <p>
+    <b>Sort:</b>
+   <%= select("article","sort",@sorts.collect{|t|[t.name,t.id]})%>
+  </p>
+  <div class="actions" id="show_action">
     <%= f.submit %>
   </div>
 <% end %>

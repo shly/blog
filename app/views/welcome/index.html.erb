@@ -10,8 +10,11 @@
  <div class="content_left">
    <% @articles.each do |article|%>
      <div class="article_contents">
-        <%= article.content %>
-     
+        <p class="art_title"><%= article.title %><span>date:<%= article.date %></span><span>author:<%= article.author %></span></p>
+        <div class="art_content"><%= article.content %></div>
+        <div class="show_detail">
+          <%=link_to '+ show detail', article %>
+        </div>
      </div>
    <% end %>
  </div>

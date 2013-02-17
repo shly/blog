@@ -1,6 +1,15 @@
-<h1>Editing article</h1>
+<div class="header">
+  <div class="header_main">
+    <h1>MYBLOG</h1>
+    <span><%= link_to '首页',welcome_index_path %></span>
+    <span><%= link_to 'About',about_index_path %></span>
+  </div>
+</div>
+
+<div class="content_show">
 
 <%= render 'form' %>
 
 <%= link_to 'Show', @article %> |
 <%= link_to 'Back', articles_path %>
+</div>
