@@ -1,3 +1,79 @@
 // Place all the styles related to the Sorts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ol.sort_list li{
+	display:block;
+	padding:10px;
+	height:40px;
+	line-height:40px;
+	width:450px;
+	border:1px solid #F0F0F0;
+}
+ol.sort_list{
+	margin-left:200px;
+	margin-top:50px;
+}
+ol.sort_list li:hover{
+	background-color:#F0F8FF;
+}
+ol.sort_list li span{
+	float:right;
+	margin-left:10px;
+}
+#sort_name{
+	width:400px;
+	height:40px;
+	border:1px solid #008B8B;
+	font-size:18px;
+	margin-bottom:10px;
+}
+.add_sort{
+	width:400px;
+	margin:0 auto;
+	margin-top:50px;
+}
+.add_sort a{
+	display:block;
+	border:1px solid #FAEBD7;
+	width:150px;
+	height:35px;
+	line-height:35px;
+	border-bottom:1px solid #A9A9A9;
+	border-right:1px solid #A9A9A9;
+	cursor: pointer;
+	text-align:center;
+	float:right;
+	position:relative;
+	top:-35px;
+	font-size:13px;
+	background-color:#F5F5DC;
+	border-radius: 3px;
+}
+.add_sort a:active{
+	border:1px solid #A9A9A9;
+	border-bottom:1px solid #FAEBD7;
+	border-bottom:1px solid #FAEBD7;
+}
+#add_sort_btn input{
+	background-color:darkCyan;
+	border-radius: 3px;
+    font-size:13px;
+    margin-right:20px;
+	border:1px solid #A9A9A9;
+	width:100px;
+	height:35px;
+	line-height:35px;
+	border-bottom:1px solid black;
+	border-right:1px solid black;
+	cursor: pointer;
+}
+#add_sort_btn input:hover,.add_sort a:hover{
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+#add_sort_btn input:active{
+	border:1px solid #A9A9A9;
+	border-bottom:1px solid #ffffff;
+	border-bottom:1px solid #ffffff;
+}

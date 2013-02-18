@@ -1,24 +1,26 @@
-<h1>Listing sorts</h1>
+<div class="header">
+  <div class="header_main">
+    <h1>自知网</h1>
+    <div class="sign">寥寥心底事，天涯各自知~</div>
+    <span><%= link_to 'Index',welcome_index_path %></span>
+    <span><%= link_to 'About',about_index_path %></span>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="content_show">
+  <div class="add_sort">
+    <%= render 'form' %>
+    <%= link_to 'Manage articles', articles_path%>
+  </div>
+  <ol class="sort_list">
+    <% @sorts.each do |sort| %>
+        <li>
+          <%= sort.name %>
+          <span><%= link_to 'Edit', edit_sort_path(sort) %></span>
+          <span><%= link_to 'Destroy', sort, method: :delete, data: { confirm: 'Are you sure?' } %><span>
+        </li>
+    <% end %>
+</ol>
 
-<% @sorts.each do |sort| %>
-  <tr>
-    <td><%= sort.name %></td>
-    <td><%= link_to 'Show', sort %></td>
-    <td><%= link_to 'Edit', edit_sort_path(sort) %></td>
-    <td><%= link_to 'Destroy', sort, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+</div>
 
-<br />
-
-<%= link_to 'New Sort', new_sort_path %>
-<%= link_to 'Magage articles', articles_path%>

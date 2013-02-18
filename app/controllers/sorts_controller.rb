@@ -3,7 +3,7 @@ class SortsController < ApplicationController
   # GET /sorts.json
   def index
     @sorts = Sort.all
-
+    @sort = Sort.new
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @sorts }
@@ -25,7 +25,6 @@ class SortsController < ApplicationController
   # GET /sorts/new.json
   def new
     @sort = Sort.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @sort }
