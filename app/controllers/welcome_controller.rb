@@ -14,7 +14,7 @@ class WelcomeController < ApplicationController
    if @articles.empty?
       redirect_to :action =>'empty'
    else
-      @articles
+      render :index
    end
   end
  
