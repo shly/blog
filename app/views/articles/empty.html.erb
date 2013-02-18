@@ -10,14 +10,9 @@
 <div class="content">
  <div class="content_left" id="con_left">
   <p><span>当前位置:</span>all articles</p>
-    <% @articles.each do |article| %>
-    <div class="article_list">
-        <%= link_to article.title,article %>
-        <span><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-        <span><%= link_to 'Edit', edit_article_path(article) %></span>
-        <span><%= article.date %></span>
+    <div class="article_list" id="empty_warn">
+       sorry donnt exist!!
     </div>
-<% end %>
  </div>
  <div class="content_right">
     <div class="write_article">
@@ -38,12 +33,6 @@
     </div>
  </div>
 </div>
-
-
-
-
-<br />
-
 
 </div>
 

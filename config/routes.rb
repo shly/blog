@@ -11,6 +11,8 @@ Blog::Application.routes.draw do
   match 'welcome/index' => 'welcome#index'
   match 'partshow' => 'welcome#partshow'
   match 'welcome/empty' => 'welcome#empty'
+  match 'article/partshow' => 'articles#partshow'
+  match 'article/empty' => 'articles#empty'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

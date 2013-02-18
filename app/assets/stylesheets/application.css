@@ -52,6 +52,13 @@
 	line-height: 80px;
 	margin: 0px;
 }
+.sign{
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	margin: 0px;
+	margin-left: 10px;
+}
 .header_main{
 	text-align: left;
 	vertical-align: text-bottom;
@@ -64,6 +71,7 @@
 	text-align: center;
 	margin-top: 50px;
 }
+
 .header_main span a{
 	color: #ffffff;
 }
@@ -86,7 +94,7 @@
 } 
 .typelist{
 	clear: both;
-	margin-left: 5px;
+	margin-left: 10px;
 	border: 1px solid #C6C8CB;
 	border-radius: 5px;
 	overflow: hidden;
@@ -165,7 +173,7 @@ p.art_title span{
 	display: block;
 	width: 90px;
 	height: 50px;
-	margin-left: 11px;
+	margin-left: 14px;
 	margin-top: 50px;
 	margin-bottom: 20px;
 	float: left;
@@ -173,6 +181,11 @@ p.art_title span{
 	border-top: 1px solid #008B8B;
 	border-left: 1px solid #008B8B;
 }
+.regist_login span a:hover{
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+ 
 .login a{
 	border: 1px solid black;
 	background-color: #00008B;
