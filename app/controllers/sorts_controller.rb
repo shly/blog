@@ -40,7 +40,6 @@ class SortsController < ApplicationController
   # POST /sorts.json
   def create
     @sort = Sort.new(params[:sort])
-    redirect_to sorts_path
      respond_to do |format|
       if @sort.save
         format.html { redirect_to @sort, notice: 'Sort was successfully created.' }
