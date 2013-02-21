@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function(){
+	var date = new Date();
+    var Mydate=date.toLocaleDateString(); 
+    var Mytime=date.toLocaleTimeString(); 
+    var time=Mydate +" "+Mytime;
+     $("#article_date").val(time);
+});
